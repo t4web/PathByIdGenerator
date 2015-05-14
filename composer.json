@@ -19,8 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "PathByIdGenerator\\": "src/PathByIdGenerator/",
-            "PathByIdGeneratorTest\\": "tests/PathByIdGeneratorTest/"
+            "PathByIdGenerator\\": "src/",
+            "PathByIdGeneratorTest\\": "tests/"
         }
     }
 }
