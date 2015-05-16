@@ -8,3 +8,15 @@ Master:
 [![Dependency Status](https://www.versioneye.com/user/projects/5557420e95febe50ad0000f1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5557420e95febe50ad0000f1)
 
 Generation path by (int) id
+
+Usage
+-------------
+```php
+$this->generator = new PathByIdGenerator();
+
+$resultPath = $this->generator->generatePath(8252291, 12);
+// $resultPath will be /00/00/08/25/22/91
+
+$resultPath = $this->generator->generatePath(8252291, 12, 3);
+// $resultPath will be /000/008/252/291
+```
