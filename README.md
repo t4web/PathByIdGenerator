@@ -5,5 +5,6 @@ Master:
 [![codecov.io](http://codecov.io/github/t4web/PathByIdGenerator/coverage.svg?branch=master)](http://codecov.io/github/t4web/PathByIdGenerator?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/t4web/ActionInjections/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/t4web/ActionInjections/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/f31d9b25-5bd9-4f9c-8fb5-4a4591faa8ea/mini.png)](https://insight.sensiolabs.com/projects/f31d9b25-5bd9-4f9c-8fb5-4a4591faa8ea)
+[![Dependency Status](https://www.versioneye.com/user/projects/5557420e95febe50ad0000f1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5557420e95febe50ad0000f1)
 
 Generation path by (int) id
