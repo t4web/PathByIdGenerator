@@ -4,12 +4,40 @@ namespace PathByIdGeneratorTest;
 
 use PathByIdGenerator\PathByIdGenerator;
 
-class PathByIdGeneratorTest extends \PHPUnit_Framework_TestCase {
+class PathByIdGeneratorTest extends \PHPUnit_Framework_TestCase
+{
+    private $generator;
 
-    public function testGeneratePathWithBadParams() {
+    public function setUp()
+    {
+        $this->generator = new PathByIdGenerator();
+    }
 
-        $generator = new PathByIdGenerator();
+    public function testGeneratePathWithDefaultSettings()
+    {
+        $resultPath = $this->generator->generatePath(8252291);
 
-        $this->assertEquals(1, 1);
+        $this->assertEquals('/00/08/25/22/91', $resultPath);
+    }
+
+    public function testGeneratePathWithPathLenght()
+    {
+        $resultPath = $this->generator->generatePath(8252291, 12);
+
+        $this->assertEquals('/00/00/08/25/22/91', $resultPath);
+    }
+
+    public function testGeneratePathWithStep()
+    {
+        $resultPath = $this->generator->generatePath(8252291, 12, 3);
+
+        $this->assertEquals('/000/008/252/291', $resultPath);
+    }
+
+    public function testGeneratePathWithBadParams()
+    {
+        $this->setExpectedException('InvalidArgumentException');
+
+        $this->generator->generatePath('');
     }
 }
