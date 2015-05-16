@@ -34,10 +34,19 @@ class PathByIdGeneratorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('/000/008/252/291', $resultPath);
     }
 
+    public function testGeneratePathWithEmptyObjectId()
+    {
+        $this->setExpectedException('InvalidArgumentException');
+        $this->setExpectedException('InvalidArgumentException', '$objectID must be numeric');
+
+        $this->generator->generatePath('');
+    }
+
     public function testGeneratePathWithBadParams()
     {
         $this->setExpectedException('InvalidArgumentException');
+        $this->setExpectedException('InvalidArgumentException', '$objectID cannot be less than $pathLength');
 
-        $this->generator->generatePath('');
+        $this->generator->generatePath(8252291, 4);
     }
 }

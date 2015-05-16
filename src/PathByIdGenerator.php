@@ -20,8 +20,12 @@ class PathByIdGenerator
      */
     public function generatePath($objectId, $pathLength = 10, $step = 2)
     {
-        if (empty($objectId) || !is_numeric($objectId) || (strlen($objectId) > $pathLength)) {
-            throw new InvalidArgumentException('Invalid argument $objectID');
+        if (empty($objectId) || !is_numeric($objectId)) {
+            throw new InvalidArgumentException('$objectID must be numeric');
+        }
+
+        if (strlen($objectId) > $pathLength) {
+            throw new InvalidArgumentException('$objectID cannot be less than $pathLength');
         }
 
         // add zeros: "0008252291"
